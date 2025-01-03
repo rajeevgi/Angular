@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-4">
+        <button class="btn btn-success" (click)="getUsers()">Get Users</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <ul>
+            @for(item of userList; track $index){
+                <li>{{ item.id }} - {{ item.name }} - {{ item.username }} - {{ item.email }}</li>
+            }
+        </ul>
+    </div>
+</div>
