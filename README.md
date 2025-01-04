@@ -16,5 +16,6 @@
     </ol>
   <li>Control Flow Statement - @if, @for, etc. </li>
   <li>Api Integration - httpClient, GET, POST, PUT, DELETE, etc.</li>
+  <li>Video Api Task - All crud operation using http methods.</li>
   </li>
 </ul>
