@@ -1,0 +1,63 @@
+<div class="mt-2 p-3 bg-secondary rounded">
+    <h1>Pipe Component Example</h1>
+    <p>DatePipe, UpperCasePipe, LowerCasePipe, etc.</p>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <h4>Date Pipe Example 1</h4>
+        <p>Before Piping : {{ currentDate }}</p>
+        <p>After Piping : {{ currentDate | date:"dd-MM-yy" }}</p>
+    </div>
+    <div class="col-3">
+        <h4>Date Pipe Example 2</h4>
+        <p>Before Piping : {{ currentDate }}</p>
+        <p>After Piping : {{ currentDate | date }}</p>
+    </div>
+    <div class="col-3">
+        <h4>Date Pipe Example 3</h4>
+        <p>Before Piping : {{ currentDate }}</p>
+        <p>After Piping : {{ currentDate | date:"dd-MMM-yy" }}</p>
+    </div>
+    <div class="col-3">
+        <h4>Date Pipe Example 4</h4>
+        <p>Before Piping : {{ currentDate }}</p>
+        <p>After Piping : {{ currentDate | date:"dd-MMM-yyy" }}</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-3">
+        <h5>Uppercase Example</h5>
+        <p><b>Before Piping :</b> {{ firstName }}</p>
+        <p><b>After Piping :</b> {{ firstName | uppercase }}</p>
+    </div>
+    <div class="col-3">
+        <h5>Lowercase Example</h5>
+        <p><b>Before piping :</b> {{ firstName }}</p>
+        <p><b>After piping :</b> {{ firstName | lowercase }}</p>
+    </div>
+    <div class="col-3">
+        <h5>Titlecase Example</h5>
+        <p><b>Before Piping : </b>{{ firstName }}</p>
+        <p><b>After Piping : </b>{{ firstName | titlecase }}</p>
+    </div>
+    <div class="col-3">
+        <h5>Currency Example </h5>
+        <p><b>Before Piping :</b>{{ rupees }}</p>
+        <p><b>After Piping :</b>{{ rupees | currency }}</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-3">
+        <h5>JsonPipe Example</h5>
+        <p><b>Before Piping : </b>{{ students }}</p>
+        <p><b>After Piping : </b>{{ students | json }}</p>
+    </div>
+    <div class="col-3">
+        <h5>PercentPipe Example</h5>
+        <p><b>Before Piping : </b>{{ percentValue }}</p>
+        <p><b>After Piping : </b>{{ percentValue | percent }}</p>
+    </div>
+</div>
