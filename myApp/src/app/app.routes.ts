@@ -7,6 +7,7 @@ import { VideosComponent } from './videos/videos.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { TemplateComponent } from './forms/template/template.component';
 import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { PostApiComponent } from './post-api/post-api.component';
 
 export const routes: Routes = [
     {
@@ -47,5 +48,10 @@ export const routes: Routes = [
     {
         path : 'reactive-form',
         component : ReactiveComponent
+    },
+
+    {
+        path : 'post-api',
+        component : PostApiComponent
     }
 ];

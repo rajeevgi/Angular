@@ -1,0 +1,75 @@
+<div class="mt-2 p-2 bg-success text-light rounded">
+    <h3>Post Api Example</h3>
+    <h1>Create Department, Department List</h1>
+</div>
+
+<div class="row pt-2">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                Department List
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sr.no</th>
+                                    <th>Name</th>
+                                    <th>City</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for(item of deptList; track $index){
+                                    <tr>
+                                        <td>{{ $index+1 }}</td>
+                                        <td>{{ item.departmentName }}</td>
+                                        <td>{{ item.departmentLogo }}</td>
+                                        <td>
+    
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                New Department
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="deptName">Department Name</label>
+                        <input type="text" [(ngModel)]="deptObj.deptName" id="deptName" class="form-control" placeholder="Enter Name">
+                    </div>
+                    <div class="col-12">
+                        <label for="deptLogo">Department Logo</label>
+                        <input type="text" [(ngModel)]="deptObj.deptLogo" id="deptLogo" class="form-control" placeholder="Enter Logo Url">
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-6 text-center">
+                        <button class="btn btn-secondary">
+                            Reset
+                        </button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button class="btn btn-secondary" (click)="saveDept()">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
