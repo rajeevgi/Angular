@@ -8,5 +8,9 @@ import { ChildComponent } from '../../child/child.component';
   styleUrl: './alert.component.css'
 })
 export class AlertComponent {
+  message: string ='';
 
+  onGreet(greet : string) {
+    this.message = greet;
+  }
 }
