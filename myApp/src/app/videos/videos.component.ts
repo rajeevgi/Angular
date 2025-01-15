@@ -16,6 +16,9 @@ export class VideosComponent implements OnInit {
   
   // Dependency Injections using Inject keyword
   videoServ = inject(VideoService);
+
+  // or we can use constructor for Dependency Injection
+  // constructor(private videoServ : VideoService){}
   
   ngOnInit(): void {
     this.getVideos();
