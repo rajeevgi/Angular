@@ -9,13 +9,27 @@
 <app-child [items]="list"></app-child> -->
 
 <!-- Example 3 -->
- <!-- <app-child [users]="user"></app-child> -->
+<!-- <app-child [users]="user"></app-child> -->
 
- <!-- Example 4 -->
-  <!-- <p>UserName : {{ username }}</p>
+<!-- Example 4 -->
+<!-- <p>UserName : {{ username }}</p>
   <p>UserEmail : {{ email }}</p>
   <app-child (dataSent)="handleData($event)"></app-child> -->
 
-  <!-- Example 5 -->
-   <p>Parent Data : {{ parentData }}</p>
-   <app-child [(data)]="parentData"></app-child>
+<!-- Example 5 -->
+<!-- <p>Parent Data : {{ parentData }}</p>
+   <app-child [(data)]="parentData"></app-child> -->
+
+<!-- Example 6 -->
+<!-- <app-child [username]="username"></app-child> -->
+
+<!-- Example 7 -->
+<!-- <p>UserName : {{ receivedUsername }}</p>
+<p>Status : {{ receivedStatus }}</p>
+
+<app-child (usernameChanged)="handleUserNameChange($event)" (statusChanged)="handleStatusChange($event)">
+</app-child> -->
+
+<!-- Example 8 -->
+<app-child (sendData)="handleSiblingData($event)"></app-child> <!-- Listen for Data -->
+<app-child-two [data]="siblingData"></app-child-two> <!-- Pass Data -->

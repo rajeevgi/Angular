@@ -34,5 +34,21 @@
     </div>
 </div> -->
 
-<p>Child Data : {{ data }}</p>
-<input [(ngModel)]="data" (ngModelChange)="updateData(data)">
+<!-- <p>Child Data : {{ data }}</p>
+<input [(ngModel)]="data" (ngModelChange)="updateData(data)"> -->
+
+<!-- <p>UserName : {{ username }}</p> -->
+
+<!-- <div class="row">
+    <div class="col-5">
+        <button class="btn btn-primary mx-2" (click)="sendUserName()">
+            Change UserName
+        </button>
+        <button class="btn btn-secondary" (click)="sendStatus()">
+            Change Status
+        </button>
+    </div>
+</div> -->
+
+<h3>Child One</h3>
+<button (click)="emitData()">Send Data to Parent</button>
