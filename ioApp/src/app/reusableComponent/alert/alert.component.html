@@ -1,3 +1,21 @@
-<!-- <app-child [message]="'Angular Developer!'"></app-child> -->
+<p>Alert component.</p>
+<h3>Parent Component</h3><br><br>
+<!-- Example 1 -->
+<!-- <p>{{ message }}</p>
+<app-child [username]="parentUsername" (messageSent)="handleMessage($event)"></app-child> -->
 
-<app-child (greet) = " 'onGreet($event)'"></app-child>
+<!-- Example 2 -->
+<!-- <button class="btn-danger" (click)="updateItems()">Add Item</button>
+<app-child [items]="list"></app-child> -->
+
+<!-- Example 3 -->
+ <!-- <app-child [users]="user"></app-child> -->
+
+ <!-- Example 4 -->
+  <!-- <p>UserName : {{ username }}</p>
+  <p>UserEmail : {{ email }}</p>
+  <app-child (dataSent)="handleData($event)"></app-child> -->
+
+  <!-- Example 5 -->
+   <p>Parent Data : {{ parentData }}</p>
+   <app-child [(data)]="parentData"></app-child>

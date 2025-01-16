@@ -1,7 +1,38 @@
+<p>Child Component.</p>
 <!-- <div class="alert alert-success">
-    <strong>Hello,</strong> {{ message }}
+    <p>Received from parent(alert) component : {{ username }}</p>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <button class="btn btn-secondary" (click)="sendMessage()">Send Message to the parent</button>
+    </div>
+</div> -->
+<!-- <app-alert [username]="username"></app-alert> -->
+
+
+<!-- <div class="row pt-3">
+    <div class="col-6">
+        <ul>
+            <li *ngFor="let item of items">
+                {{ item }}
+            </li>
+        </ul>
+    </div>
 </div> -->
 
-<div class="alert alert-warning">
-    {{ message }}
-</div>
+<!-- <div class="row">
+    <div class="col-5">
+        <p>Name : {{ users.name }}</p>
+        <p>Gender : {{ users.gender }}</p>
+    </div>
+</div> -->
+
+<!-- <div class="row">
+    <div class="col-4">
+        <button class="btn btn-warning" (click)="sendData()">Send Data to Parent</button>
+    </div>
+</div> -->
+
+<p>Child Data : {{ data }}</p>
+<input [(ngModel)]="data" (ngModelChange)="updateData(data)">

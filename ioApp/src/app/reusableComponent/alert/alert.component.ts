@@ -8,9 +8,35 @@ import { ChildComponent } from '../../child/child.component';
   styleUrl: './alert.component.css'
 })
 export class AlertComponent {
-  message: string ='';
 
-  onGreet(greet : string) {
-    this.message = greet;
-  }
+  // @Input() username!: string;
+  // parentUsername = "John Doe";
+
+  // message : string = '';
+
+  // handleMessage(message : string){
+  //   this.message = message;
+  // }
+
+    // list = ['Item1','Item2','Item3'];
+
+    // updateItems(){
+    //   this.list.push('New Item');
+    // }
+
+    // user = {
+    //   name : 'rajeev',
+    //   gender : 'male'
+    // };
+
+    // username : string = "";
+    // email : string = "";
+
+    // handleData(Data : { username : string, email : string }){
+    //   this.username = Data.username;
+    //   this.email = Data.email;
+    // }
+
+    parentData : string = 'initial data.';
+
 }
