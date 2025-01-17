@@ -11,18 +11,20 @@ import { LayoutComponent } from './login/layout/layout.component';
 
 export const routes: Routes = [
 
-    // Default route
+    // Default Route
     {
         path: '',
         redirectTo: 'app-login',
         pathMatch: 'full'
     },
 
+    // Login Page
     {
         path: 'app-login',
         component: LoginComponent
     },
-
+    
+    // After Login it will route to Layout Component
     {
         path: '',
         component: LayoutComponent,

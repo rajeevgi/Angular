@@ -31,10 +31,13 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" type="button" (click)="logOff()">sign-out</button>
+                    <span class="text-warning">{{ loggedUserData.EmailId }}</span>
+                </li>
+                <li class="nav-item">
+                </li>
             </ul>
-            <form class="d-flex">
-                <button class="btn btn-primary" type="button" (click)="logOff()">LogOff</button>
-            </form>
         </div>
     </div>
 </nav>
