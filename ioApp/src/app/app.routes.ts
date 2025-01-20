@@ -8,6 +8,7 @@ import { ViewChildComponent } from './ViewChildExample/view-child/view-child.com
 import { ParentChildComponent } from './ViewChildExample/parent-child/parent-child.component';
 import { LoginComponent } from './login/login/login.component';
 import { LayoutComponent } from './login/layout/layout.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
 
@@ -31,37 +32,44 @@ export const routes: Routes = [
         children: [
             {
                 path: 'app-alert',
-                component: AlertComponent
+                component: AlertComponent,
+                canActivate : [authGuard]
             },
 
             {
                 path: 'app-child',
-                component: ChildComponent
+                component: ChildComponent,
+                canActivate : [authGuard]
             },
 
             {
                 path: 'app-lifecycle-event',
-                component: LifecycleEventComponent
+                component: LifecycleEventComponent,
+                canActivate : [authGuard]
             },
 
             {
                 path: 'app-template-example',
-                component: TemplateExampleComponent
+                component: TemplateExampleComponent,
+                canActivate : [authGuard]
             },
 
             {
                 path: 'app-ng-container-example',
-                component: NgContainerExampleComponent
+                component: NgContainerExampleComponent,
+                canActivate : [authGuard]
             },
 
             {
                 path: 'app-view-child',
-                component: ViewChildComponent
+                component: ViewChildComponent,
+                canActivate : [authGuard]
             },
 
             {
                 path: 'app-parent-child',
-                component: ParentChildComponent
+                component: ParentChildComponent,
+                canActivate : [authGuard]
             }
         ]
 
