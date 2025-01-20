@@ -21,4 +21,8 @@
   </li>
   <li>Services</li>
   <li>Component: @Input, @Output and Reusable Component</li>
+  <li>Angular ng-template, ng-container,and @ViewChild Directive</li>
+  <li>Angular ngModelChange, Angular Decorators.</li>
+  <li>Angular : Login Page</li>
+  <li>Angular canActivate</li>
 </ul>
