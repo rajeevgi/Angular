@@ -24,5 +24,6 @@
   <li>Angular ng-template, ng-container,and @ViewChild Directive</li>
   <li>Angular ngModelChange, Angular Decorators.</li>
   <li>Angular : Login Page</li>
-  <li>Angular canActivate</li>
+  <li>Angular canActivate Guard : provides authentication , authorization and used to control navigation to specific routes.</li>
+  <li>Angular Constant file : It defines and stored constant values that remain the same throughout the application. </li>
 </ul>
