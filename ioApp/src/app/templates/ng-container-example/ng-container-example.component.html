@@ -1,0 +1,83 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>ngContainer Example</h1>
+</div>
+
+<div class="row pt-3">
+    <div class="col-4 text-center">
+        <ng-container *ngIf="isContainer">
+            <p>This is from ng-container...</p>
+        </ng-container>
+    </div>
+    <div class="col-4 text-center">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>UserName</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="isApi">
+                    <tr>
+                        <td colspan="4" class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-border text-secondary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-border text-success" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-border text-danger" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-border text-warning" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-border text-info" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-border text-light" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-border text-dark" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-container>
+                <ng-container *ngIf="!isApi">
+                    <tr *ngFor="let student of userList ; let srNo = index">
+                        <td>{{ srNo+1 }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.username }}</td>
+                        <td>{{ student.email }}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4 text-center">
+        <ng-container *ngTemplateOutlet="myTem">
+
+        </ng-container>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary" (click)="getUser()">Load Content</button>
+    </div>
+    <div class="col-4">
+
+    </div>
+</div>
+
+<ng-template #myTem>
+    <p>Hi from template</p>
+</ng-template>

@@ -1,0 +1,38 @@
+<p>user works!</p>
+<div class="col-4 p-3 bg-success">
+    <p class="text-light">This is the example of InterPolation</p>
+    <p>Course Name : {{ courseName }}</p>
+    <p>Course Duration : {{ courseDuration }}</p>
+</div>
+<div class="col-4 p-3 bg-primary">
+    <p class="text-warning">This is the example of Property Binding</p>
+    <!-- <input type="text" value="{{courseName}}" placeholder="Name"> -->
+     <input type="text" [value]="courseName" placeholder="Name">
+</div>
+<div class="col-4 p-3 bg-danger">
+    <p class="text-light">This is the example of Event Binding</p>
+    <button class="btn btn-primary" (click)="showMessage()">Click to Show Message</button>
+    <select (change)="onStateChange()">
+        <option value="mh">Maharashtra</option>
+        <option value="goa">Goa</option>
+        <option value="up">UttarPradesh</option>
+        <option value="pun">Punjab</option>
+    </select>
+</div>
+<div class="col-6 p-3 ">
+    <p>This is the example of .html to .ts</p>
+    <button class="btn btn-primary" (click)="showLangName('Java')">Java</button>
+    <button class="btn btn-danger" (click)="showLangName('Angular')">Angular</button>
+    <button class="btn btn-warning" (click)="showLangName('React')">React</button>
+</div>
+<div class="col-6 p-3">
+    <p>Example of Two Way Data Binding</p>
+    <div class="col-3">
+        <p>Without ngModel</p>
+        <input type="text" [value]="courseName" placeholder="Name"> 
+    </div>
+    <div class="col-3">
+        <p>With ngModel</p>
+        <input type="text" [(ngModel)]="courseName" placeholder="Name">
+    </div>
+</div>

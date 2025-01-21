@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" routerLink="user-page">User</a>
+        <a class="nav-link" routerLink="admin">Admin</a>
+        <a class="nav-link" routerLink="control-Flow">ControlFlow</a>
+        <a class="nav-link" routerLink="Api">GetApi</a>
+        <a class="nav-link" routerLink="post-api">PostApi</a>
+        <a class="nav-link" routerLink="video">Video</a>
+        <a class="nav-link" routerLink="pipe">Pipe</a>
+        <a class="nav-link" routerLink="template-form">Template</a>
+        <a class="nav-link" routerLink="reactive-form">Reactive</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <div col-6 p-3>
+  <p>{{ title }}</p>
+</div> -->
+<!-- <app-admin></app-admin>
+<app-user></app-user> -->
+<router-outlet></router-outlet>

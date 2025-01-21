@@ -1,0 +1,130 @@
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        @if(isDiv1Visible == true){
+        <div class="bg-success p-3">
+            Div 1
+        </div>
+        }
+    </div>
+    <div class="col-3 text-center">
+        @if(isDiv2Visible == "Yes"){
+        <div class="bg-danger p-3">
+            Div 2
+        </div>
+        } @else{
+        <p>Div 2 hidden</p>
+        }
+    </div>
+    <div class="col-3 text-center">
+        @if(dayName == "Mon"){
+        <div class="bg-warning p-3">
+            Monday
+        </div>
+        } @else if( dayName == "Tue"){
+        <div class="bg-warning p-3">
+            Tuesday
+        </div>
+        } @else if( dayName == "Wed"){
+        <div class="bg-warning p-3">
+            Wednesday
+        </div>
+        } @else if( dayName == "Thu"){
+        <div class="bg-warning p-3">
+            Thursday
+        </div>
+        } @else if( dayName == "Fri"){
+        <div class="bg-warning p-3">
+            Friday
+        </div>
+        } @else if( dayName == "Sat"){
+        <div class="bg-warning p-3">
+            Saturday
+        </div>
+        } @else if( dayName == "Sun"){
+        <div class="bg-warning p-3">
+            Sunday
+        </div>
+        }@else{
+        <div class="b-warning p-3">
+            Invalid Input
+        </div>
+        }
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="showHideDiv1(false)">Hide</button>
+        <button class="btn btn-danger" (click)="showHideDiv1(true)">Show</button>
+    </div>
+    <div class="col-3 text-center">
+        <!-- <p>This is the example of event binding</p> -->
+        <!-- <button class="btn btn-success" (click)="showHideDiv2(false)">Hide</button>
+        <button class="btn btn-danger" (click)="showHideDiv2(true)">Show</button> -->
+
+        <p>This is the example of two way binding</p>
+        <input type="text" [(ngModel)]="isDiv2Visible" />
+    </div>
+    <div class="col-3 text-center">
+        <!-- <p>This is the example of event binding</p> -->
+        <!-- <button class="btn btn-success" (click)="showHideDiv3(false)">Hide</button>
+        <button class="btn btn-danger" (click)="showHideDiv3(true)">Show</button> -->
+
+        <p>This is the example of two way binding</p>
+        <input type="text" [(ngModel)]="dayName" maxlength="3" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3 p-3">
+        <p>My cities are:</p>
+        <ul>
+            @for (item of myCities; track $index){
+            <li>{{ item }}</li>
+            }
+        </ul>
+    </div>
+    <div class="col-3 p-3">
+        @for( city of myCities; track $index){
+        <button class="btn btn-danger mx-2">{{ city }}</button>
+        }
+    </div>
+    <div class="col-3 p-3">
+        @for( city of myCities; track $index){
+        <input type="text" [value]="city">
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3 p-3">
+        <table class="table table-bordered table-border-dark">
+            <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>City</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of studentList; track $index){
+                <tr>
+                    <td>{{$index+1}}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.mobile }}</td>
+                    <td>{{ item.city }}</td>
+                    <td style="background-color: {{ item.isActive ? 'green' : 'red'}}">
+                        @if(item.isActive){
+                        <span>Active</span>
+                        }@else{
+                        <span>Not Active</span>
+                        }
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
